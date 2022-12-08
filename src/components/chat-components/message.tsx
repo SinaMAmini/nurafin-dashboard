@@ -2,7 +2,7 @@ import * as React from 'react';
 
 type Props = {
     msg: string;
-    fromWho: string;
+    fromWho?: string;
     toWho: string;
 };
 export const Message = ({msg, fromWho, toWho}: Props) => {

@@ -1,10 +1,22 @@
 import * as React from 'react';
+import {Message} from './message';
 
-type Props = {};
-export const ChatSection = (props: Props) => {
+type message = {
+    text: string;
+    id: number;
+};
+
+type Props = {
+    contact: string;
+    messages: message[];
+};
+
+export const ChatSection = ({messages, contact}: Props) => {
     return (
         <div>
-            <p>This is chat section</p>
+            {messages.map((message) => {
+                return <Message msg={message.text} toWho={contact} key={message.id} />;
+            })}
         </div>
     );
 };
