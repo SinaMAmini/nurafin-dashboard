@@ -5,6 +5,8 @@ import {SmallInfo} from './small-info';
 import {useState} from 'react';
 import {Diagram} from './diagram';
 import {option1, option2} from '../utlts/highchart-options';
+import {ChatSection} from './chat-components/chat-section';
+import {Apollo} from '../helper-components/apollo';
 
 type Props = {};
 export const SectionsContainer = (props: Props) => {
@@ -26,6 +28,8 @@ export const SectionsContainer = (props: Props) => {
             <SmallInfo title="Signals" infos={signal} />
             <Diagram options={option1} />
             <Diagram options={option2} />
+            <ChatSection />
+            <Apollo />
         </div>
     );
 };
