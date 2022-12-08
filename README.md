@@ -1,6 +1,6 @@
 It's my project for hiring!
 
-[projects-page](#)
+[project-page](#)
 
 The goal of this project is making interviewer happy to hiring me!
 
@@ -24,4 +24,4 @@ npm run dev
 
 ## Contributing
 
-If you want to have extra time(!) please read [CONTRIBUTING.md](CONTRIBUTING.md).
+If you have extra time(!) please read [CONTRIBUTING.md](CONTRIBUTING.md).
