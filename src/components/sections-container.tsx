@@ -24,11 +24,11 @@ export const SectionsContainer = (props: Props) => {
     return (
         <div className="sections-container">
             <Welcome />
-            <SmallInfo title="Trade Gain" infos={tradeGain} wordAfterLabel="%" />
-            <SmallInfo title="Signals" infos={signal} />
+            <SmallInfo title="Trade Gain" infos={tradeGain} wordAfterLabel="%" bc="blue" />
+            <SmallInfo title="Signals" infos={signal} bc="purple" />
             <Diagram options={option1} />
             <Diagram options={option2} />
-            <ChatSection />
+            <ChatSection contact="admin" messages={[]} />
             <Apollo />
         </div>
     );

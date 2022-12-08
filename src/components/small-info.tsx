@@ -10,11 +10,12 @@ type Props = {
     title: string;
     infos: subProp[];
     wordAfterLabel?: string;
+    bc: string;
 };
-export const SmallInfo = ({title, infos, wordAfterLabel}: Props) => {
+export const SmallInfo = ({title, infos, wordAfterLabel, bc}: Props) => {
     return (
         <div className="info-container">
-            <div className="title">
+            <div className={'title ' + bc}>
                 <h3>{title}</h3>
             </div>
             <div className="infos">
