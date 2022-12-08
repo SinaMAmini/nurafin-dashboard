@@ -1,0 +1,16 @@
+.profile-page-container {
+    padding: var(--padding-large) max(calc((100% - 120rem) / 2), 2rem);
+
+    .nav-list {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+
+        block-size: 4rem;
+
+        img {
+            inline-size: 2rem;
+            block-size: 2rem;
+        }
+    }
+}
