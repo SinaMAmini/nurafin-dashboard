@@ -9,6 +9,7 @@ import {ChatSection} from './chat-components/chat-section';
 import {Apollo} from '../helper-components/apollo';
 import {TodoList} from './todo-list';
 import {todoListExample} from '../utlts/todo-list-example';
+import {Contacts} from './chat-components/contacts';
 
 export const SectionsContainer = () => {
     const [tradeGain, useTradeGain] = useState([
@@ -22,6 +23,9 @@ export const SectionsContainer = () => {
         {subtitle: 'Your Signals', amount: 1234},
     ]);
 
+    const [contacts, useContacts] = useState([]);
+    //{name: 'test', number: 0, lastMsg: null, imgSrc: undefined}
+
     return (
         <div className="sections-container">
             <Welcome />
@@ -30,6 +34,7 @@ export const SectionsContainer = () => {
             <TodoList todoList={todoListExample} />
             <Diagram options={option1} />
             <Diagram options={option2} />
+            <Contacts contacts={contacts} updateContacts={useContacts} />
             <ChatSection contact="admin" messages={[]} />
             <Apollo />
         </div>
