@@ -7,9 +7,10 @@ import {Diagram} from './diagram';
 import {option1, option2} from '../utlts/highchart-options';
 import {ChatSection} from './chat-components/chat-section';
 import {Apollo} from '../helper-components/apollo';
+import {TodoList} from './todo-list';
+import {todoListExample} from '../utlts/todo-list-example';
 
-type Props = {};
-export const SectionsContainer = (props: Props) => {
+export const SectionsContainer = () => {
     const [tradeGain, useTradeGain] = useState([
         {subtitle: 'This year', amount: 3.05},
         {subtitle: 'This month', amount: 2.86},
@@ -26,6 +27,7 @@ export const SectionsContainer = (props: Props) => {
             <Welcome />
             <SmallInfo title="Trade Gain" infos={tradeGain} wordAfterLabel="%" bc="blue" />
             <SmallInfo title="Signals" infos={signal} bc="purple" />
+            <TodoList todoList={todoListExample} />
             <Diagram options={option1} />
             <Diagram options={option2} />
             <ChatSection contact="admin" messages={[]} />
