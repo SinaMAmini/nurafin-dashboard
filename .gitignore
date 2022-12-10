@@ -209,4 +209,7 @@ sketch
 # https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij
 .idea/**/azureSettings.xml
 
+# build
+dist
+
 # End of https://www.toptal.com/developers/gitignore/api/webstorm,jetbrains+all,visualstudiocode,react

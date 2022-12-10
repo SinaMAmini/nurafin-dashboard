@@ -1,0 +1,15 @@
+.input-container {
+    background-color: aqua;
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    block-size: 4rem;
+    padding: 0.2rem 2rem;
+    font-size: var(--font-size-paragraph);
+
+    .text-input {
+        padding: 0.5rem 1rem;
+        resize: none;
+        overflow-y: hidden;
+    }
+}

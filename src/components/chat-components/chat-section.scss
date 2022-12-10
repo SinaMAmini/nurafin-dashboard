@@ -1,8 +1,37 @@
 .chat-container {
+    position: relative;
     inline-size: 50rem;
     block-size: 40rem;
 
     border-radius: 2rem;
     box-shadow: 0 0 0.5rem 0 var(--color-gray-40);
     background-color: var(--color--default-background);
+
+    padding: 1rem 1rem;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .contact-name {
+        position: absolute;
+        background-color: var(--color--primary-lighter);
+        inset-block-start: 0;
+        inset-inline: 0;
+        text-align: center;
+
+        padding: 0.5rem;
+    }
+
+    .text-input {
+        background-color: aqua;
+        position: absolute;
+        inset-block-end: 0;
+        inset-inline: 0;
+        block-size: 4rem;
+        padding: 0.2rem 2rem;
+        font-size: var(--font-size-paragraph);
+    }
 }

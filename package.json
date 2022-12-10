@@ -1,9 +1,12 @@
 {
+    "homepage": "http://SinaMAmini.github.io/nurafin-dashboard",
     "name": "profile-page-project",
     "private": true,
     "version": "0.0.0",
     "type": "module",
     "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "dev": "vite",
         "build": "tsc && vite build",
         "preview": "vite preview",
@@ -35,6 +38,7 @@
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-react": "^7.31.11",
+        "gh-pages": "^4.0.0",
         "postcss": "^8.4.19",
         "prettier": "^2.8.0",
         "stylelint": "^14.16.0",

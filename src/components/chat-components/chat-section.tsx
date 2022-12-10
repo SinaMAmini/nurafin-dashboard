@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Message} from './message';
 import './chat-section.scss';
+import {TextInput} from './text-input';
 
 type message = {
     text: string;
@@ -23,6 +24,7 @@ export const ChatSection = ({contact}: Props) => {
             {messages.map((message) => {
                 return <Message msg={message.text} toWho={contact} key={message.id} />;
             })}
+            <TextInput />
         </div>
     );
 };
