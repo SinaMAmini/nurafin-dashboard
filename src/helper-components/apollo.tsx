@@ -14,7 +14,7 @@ type Props = {
 export const Apollo = ({activeContact}: Props) => {
     return (
         <ApolloProvider client={client}>
-            <ChatSection contact={activeContact} />
+            <ChatSection contactName={activeContact} />
         </ApolloProvider>
     );
 };

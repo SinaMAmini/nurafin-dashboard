@@ -1,15 +1,14 @@
 import * as React from 'react';
-import {Welcome} from './welcome';
+import {Welcome} from './sections-components/welcome';
 import './sections-container.scss';
-import {SmallInfo} from './small-info';
+import {SmallInfo} from './sections-components/small-info';
 import {useState} from 'react';
-import {Diagram} from './diagram';
-import {option1, option2} from '../../utlts/highchart-options';
-import {ChatSection} from '../chat-components/chat-section';
-import {Apollo} from '../../helper-components/apollo';
-import {TodoList} from './todo-list';
-import {todoListExample} from '../../utlts/todo-list-example';
-import {Contacts} from '../chat-components/contacts';
+import {Diagram} from './sections-components/diagram';
+import {option1, option2} from '../utlts/highchart-options';
+import {Apollo} from '../helper-components/apollo';
+import {TodoList} from './sections-components/todo-list';
+import {todoListExample} from '../utlts/todo-list-example';
+import {Contacts} from './chat-components/contacts';
 
 export const SectionsContainer = () => {
     const [tradeGain, setTradeGain] = useState([
@@ -25,7 +24,7 @@ export const SectionsContainer = () => {
 
     const [contacts, setContacts] = useState([]);
 
-    const [activeContact, setActiveContact] = useState('');
+    const [activeContactName, setActiveContactName] = useState('');
 
     return (
         <div className="sections-container">
@@ -36,8 +35,8 @@ export const SectionsContainer = () => {
             <TodoList todoList={todoListExample} />
             <Diagram options={option1} />
             <Diagram options={option2} />
-            <Contacts contacts={contacts} updateActiveChat={setActiveContact} />
-            <Apollo activeContact={activeContact} />
+            <Contacts contacts={contacts} updateActiveChat={setActiveContactName} />
+            <Apollo activeContact={activeContactName} />
         </div>
     );
 };

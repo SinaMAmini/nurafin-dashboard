@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './profile.scss';
-import {SectionsContainer} from '../components/sections-components/sections-container';
+import {SectionsContainer} from '../components/sections-container';
 import {Navbar} from '../components/navbar-components/navbar';
 
 export const Profile = () => {

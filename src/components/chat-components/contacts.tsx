@@ -1,17 +1,11 @@
 import * as React from 'react';
 import './contacts.scss';
 import {useEffect, useState} from 'react';
+import {Contact} from '../../interfaces/contact';
 
 type Props = {
-    contacts: contact[];
+    contacts: Contact[];
     updateActiveChat: Function;
-};
-
-type contact = {
-    name: string;
-    number: number;
-    lastMsg: string | null;
-    imgSrc: string | undefined;
 };
 
 export const Contacts = ({contacts, updateActiveChat}: Props) => {
@@ -22,7 +16,7 @@ export const Contacts = ({contacts, updateActiveChat}: Props) => {
     }, [contactsStringify]);
 
     const createFirstContact = (_name: string, _number: number) => {
-        const newContact = {
+        const newContact: Contact = {
             name: _name,
             number: _number,
             lastMsg: null,
