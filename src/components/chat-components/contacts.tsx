@@ -40,7 +40,7 @@ export const Contacts = ({contacts, updateContacts}: Props) => {
                     if (!!contact.imgSrc) {
                         return (
                             <div key={contact.number} className="contact">
-                                <img src="/src/assets/images/man.png" alt="man picture" />
+                                <img src={contact.imgSrc} alt="man" className="img" />
                                 <h5>{contact.name}</h5>
                                 <p>{contact.lastMsg ? contact.lastMsg : 'Lets start a conversation!'}</p>
                             </div>
@@ -48,7 +48,7 @@ export const Contacts = ({contacts, updateContacts}: Props) => {
                     } else {
                         return (
                             <div className="contact" key={contact.number}>
-                                <img src={contact.imgSrc} alt="contact image" />
+                                <img src="/src/assets/images/man.png" alt="man" className="img" />
                                 <h5>{contact.name}</h5>
                                 <p>{contact.lastMsg ? contact.lastMsg : 'Lets start a conversation!'}</p>
                             </div>

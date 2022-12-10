@@ -8,11 +8,7 @@
                 "project": ["tsconfig.json"],
                 "createDefaultProgram": true
             },
-            "extends": [
-                "plugin:@angular-eslint/recommended",
-                "plugin:@angular-eslint/template/process-inline-templates",
-                "prettier"
-            ],
+            "extends": ["prettier"],
             "plugins": ["prettier"],
             "rules": {
                 "@typescript-eslint/explicit-member-accessibility": ["error"],
@@ -22,7 +18,7 @@
         },
         {
             "files": ["*.html"],
-            "extends": ["plugin:@angular-eslint/template/recommended", "prettier"],
+            "extends": ["prettier"],
             "plugins": ["prettier"],
             "rules": {"prettier/prettier": ["error", {"endOfLine": "auto"}]}
         }
