@@ -8,10 +8,14 @@ type message = {
 
 type Props = {
     contact: string;
-    messages: message[];
 };
 
-export const ChatSection = ({messages, contact}: Props) => {
+export const ChatSection = ({contact}: Props) => {
+    function getMessages(_contact: string) {
+        return [];
+    }
+
+    const messages: message[] = getMessages(contact);
     return (
         <div>
             {messages.map((message) => {

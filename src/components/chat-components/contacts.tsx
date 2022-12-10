@@ -4,7 +4,7 @@ import {useEffect, useState} from 'react';
 
 type Props = {
     contacts: contact[];
-    updateContacts: Function;
+    updateActiveChat: Function;
 };
 
 type contact = {
@@ -14,11 +14,11 @@ type contact = {
     imgSrc: string | undefined;
 };
 
-export const Contacts = ({contacts, updateContacts}: Props) => {
+export const Contacts = ({contacts, updateActiveChat}: Props) => {
     const [contactsStringify, useContactStringify] = useState(JSON.stringify(contacts));
 
     useEffect(() => {
-        updateContacts(contacts);
+        updateActiveChat(contacts[contacts.length - 1].name);
     }, [contactsStringify]);
 
     const createFirstContact = (_name: string, _number: number) => {
@@ -33,13 +33,17 @@ export const Contacts = ({contacts, updateContacts}: Props) => {
         useContactStringify(JSON.stringify(contacts));
     };
 
+    function gotoChat(_name: string) {
+        updateActiveChat(_name);
+    }
+
     if (contacts.length !== 0) {
         return (
             <div className="contacts-container">
                 {contacts.map((contact) => {
                     if (!!contact.imgSrc) {
                         return (
-                            <div key={contact.number} className="contact">
+                            <div key={contact.number} className="contact" onClick={() => gotoChat(contact.name)}>
                                 <img src={contact.imgSrc} alt="man" className="img" />
                                 <h5>{contact.name}</h5>
                                 <p>{contact.lastMsg ? contact.lastMsg : 'Lets start a conversation!'}</p>
@@ -47,7 +51,7 @@ export const Contacts = ({contacts, updateContacts}: Props) => {
                         );
                     } else {
                         return (
-                            <div className="contact" key={contact.number}>
+                            <div className="contact" key={contact.number} onClick={() => gotoChat(contact.name)}>
                                 <img src="/src/assets/images/man.png" alt="man" className="img" />
                                 <h5>{contact.name}</h5>
                                 <p>{contact.lastMsg ? contact.lastMsg : 'Lets start a conversation!'}</p>

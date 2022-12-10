@@ -24,7 +24,8 @@ export const SectionsContainer = () => {
     ]);
 
     const [contacts, useContacts] = useState([]);
-    //{name: 'test', number: 0, lastMsg: null, imgSrc: undefined}
+
+    const [activeContact, useActiveContact] = useState('');
 
     return (
         <div className="sections-container">
@@ -34,8 +35,8 @@ export const SectionsContainer = () => {
             <TodoList todoList={todoListExample} />
             <Diagram options={option1} />
             <Diagram options={option2} />
-            <Contacts contacts={contacts} updateContacts={useContacts} />
-            <ChatSection contact="admin" messages={[]} />
+            <Contacts contacts={contacts} updateActiveChat={useActiveContact} />
+            <ChatSection contact={activeContact} />
             <Apollo />
         </div>
     );

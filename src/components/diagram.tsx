@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+import './diagram.scss';
 
 type Props = {
     options: any;

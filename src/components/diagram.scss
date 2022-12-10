@@ -1,0 +1,9 @@
+.chart-container {
+    border-radius: 2rem;
+
+    box-shadow: 0 0 0.5rem 0 var(--color-gray-40);
+
+    .highcharts-container {
+        border-radius: 2rem;
+    }
+}
