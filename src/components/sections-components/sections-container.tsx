@@ -37,8 +37,7 @@ export const SectionsContainer = () => {
             <Diagram options={option1} />
             <Diagram options={option2} />
             <Contacts contacts={contacts} updateActiveChat={useActiveContact} />
-            <ChatSection contact={activeContact} />
-            <Apollo />
+            <Apollo activeContact={activeContact} />
         </div>
     );
 };

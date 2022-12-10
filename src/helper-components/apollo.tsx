@@ -7,12 +7,14 @@ const client = new ApolloClient({
     cache: new InMemoryCache(),
 });
 
-type Props = {};
+type Props = {
+    activeContact: string;
+};
 
-export const Apollo = (props: Props) => {
+export const Apollo = ({activeContact}: Props) => {
     return (
         <ApolloProvider client={client}>
-            <ChatSection contact="admin" messages={[]} />
+            <ChatSection contact={activeContact} />
         </ApolloProvider>
     );
 };

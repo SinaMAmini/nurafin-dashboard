@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {Message} from './message';
+import './chat-section.scss';
 
 type message = {
     text: string;
@@ -17,7 +18,8 @@ export const ChatSection = ({contact}: Props) => {
 
     const messages: message[] = getMessages(contact);
     return (
-        <div>
+        <div className="chat-container">
+            <h3 className="contact-name">{contact}</h3>
             {messages.map((message) => {
                 return <Message msg={message.text} toWho={contact} key={message.id} />;
             })}
