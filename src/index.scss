@@ -151,4 +151,9 @@ body {
 
         cursor: not-allowed;
     }
+
+    button:active {
+        outline: none;
+        transform: scale(0.98);
+    }
 }

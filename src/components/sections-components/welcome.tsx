@@ -6,7 +6,7 @@ export const Welcome = (props: Props) => {
     return (
         <div className="welcome">
             <div className="first-half">
-                <h5>Welcome Back Reza!</h5>
+                <h3>Welcome Back Reza!</h3>
                 <span>Nurafin Dashboard</span>
             </div>
             <img src="/src/assets/images/man.png" alt="man" className="img" />
