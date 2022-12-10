@@ -18,7 +18,7 @@ export const Contacts = ({contacts, updateActiveChat}: Props) => {
     const [contactsStringify, useContactStringify] = useState(JSON.stringify(contacts));
 
     useEffect(() => {
-        updateActiveChat(contacts[contacts.length - 1].name);
+        if (contacts.length !== 0) updateActiveChat(contacts[contacts.length - 1].name);
     }, [contactsStringify]);
 
     const createFirstContact = (_name: string, _number: number) => {

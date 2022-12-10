@@ -1,0 +1,13 @@
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    block-size: 4rem;
+
+    img {
+        inline-size: 2rem;
+        block-size: 2rem;
+    }
+}

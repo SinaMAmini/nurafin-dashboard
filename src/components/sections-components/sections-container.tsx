@@ -4,12 +4,12 @@ import './sections-container.scss';
 import {SmallInfo} from './small-info';
 import {useState} from 'react';
 import {Diagram} from './diagram';
-import {option1, option2} from '../utlts/highchart-options';
-import {ChatSection} from './chat-components/chat-section';
-import {Apollo} from '../helper-components/apollo';
+import {option1, option2} from '../../utlts/highchart-options';
+import {ChatSection} from '../chat-components/chat-section';
+import {Apollo} from '../../helper-components/apollo';
 import {TodoList} from './todo-list';
-import {todoListExample} from '../utlts/todo-list-example';
-import {Contacts} from './chat-components/contacts';
+import {todoListExample} from '../../utlts/todo-list-example';
+import {Contacts} from '../chat-components/contacts';
 
 export const SectionsContainer = () => {
     const [tradeGain, useTradeGain] = useState([
@@ -29,6 +29,7 @@ export const SectionsContainer = () => {
 
     return (
         <div className="sections-container">
+            <h2 className="page-title">Dashboard</h2>
             <Welcome />
             <SmallInfo title="Trade Gain" infos={tradeGain} wordAfterLabel="%" bc="blue" />
             <SmallInfo title="Signals" infos={signal} bc="purple" />
