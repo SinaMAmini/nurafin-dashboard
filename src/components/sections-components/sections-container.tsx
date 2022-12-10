@@ -12,20 +12,20 @@ import {todoListExample} from '../../utlts/todo-list-example';
 import {Contacts} from '../chat-components/contacts';
 
 export const SectionsContainer = () => {
-    const [tradeGain, useTradeGain] = useState([
+    const [tradeGain, setTradeGain] = useState([
         {subtitle: 'This year', amount: 3.05},
         {subtitle: 'This month', amount: 2.86},
         {subtitle: 'Today', amount: 0.01},
     ]);
 
-    const [signal, useSignal] = useState([
+    const [signal, setSignal] = useState([
         {subtitle: 'Total Signals', amount: 4122},
         {subtitle: 'Your Signals', amount: 1234},
     ]);
 
-    const [contacts, useContacts] = useState([]);
+    const [contacts, setContacts] = useState([]);
 
-    const [activeContact, useActiveContact] = useState('');
+    const [activeContact, setActiveContact] = useState('');
 
     return (
         <div className="sections-container">
@@ -36,7 +36,7 @@ export const SectionsContainer = () => {
             <TodoList todoList={todoListExample} />
             <Diagram options={option1} />
             <Diagram options={option2} />
-            <Contacts contacts={contacts} updateActiveChat={useActiveContact} />
+            <Contacts contacts={contacts} updateActiveChat={setActiveContact} />
             <Apollo activeContact={activeContact} />
         </div>
     );

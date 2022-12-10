@@ -2,9 +2,11 @@ import * as React from 'react';
 import {createRef, useEffect, useRef, useState} from 'react';
 import './text-input.scss';
 
-type Props = {};
-export const TextInput = (props: Props) => {
-    const [val, setVal] = useState('');
+type Props = {
+    val: string;
+    setVal: Function;
+};
+export const TextInput = ({val, setVal}: Props) => {
     const textAreaRef = useRef(null);
 
     const resizeTextArea = () => {

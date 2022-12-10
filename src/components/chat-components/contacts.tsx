@@ -15,7 +15,7 @@ type contact = {
 };
 
 export const Contacts = ({contacts, updateActiveChat}: Props) => {
-    const [contactsStringify, useContactStringify] = useState(JSON.stringify(contacts));
+    const [contactsStringify, setContactStringify] = useState(JSON.stringify(contacts));
 
     useEffect(() => {
         if (contacts.length !== 0) updateActiveChat(contacts[contacts.length - 1].name);
@@ -30,7 +30,7 @@ export const Contacts = ({contacts, updateActiveChat}: Props) => {
         };
         contacts.push(newContact);
 
-        useContactStringify(JSON.stringify(contacts));
+        setContactStringify(JSON.stringify(contacts));
     };
 
     function gotoChat(_name: string) {
