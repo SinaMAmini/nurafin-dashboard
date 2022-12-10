@@ -29,9 +29,23 @@
         background-color: aqua;
         position: absolute;
         inset-block-end: 0;
-        inset-inline: 0;
+        inset-inline-start: 0;
+        inset-inline-end: 6rem;
         block-size: 4rem;
         padding: 0.2rem 2rem;
         font-size: var(--font-size-paragraph);
+        border-top-right-radius: 2rem;
+    }
+
+    .send-btn {
+        position: absolute;
+        inset-block-end: 0;
+        inset-inline-end: 0;
+        block-size: 4rem;
+        padding: 0 0.5rem;
+        z-index: 2;
+
+        font-size: var(--font-size-paragraph);
+        color: var(--color--primary-fade);
     }
 }

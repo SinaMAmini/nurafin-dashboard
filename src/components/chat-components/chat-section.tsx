@@ -24,6 +24,7 @@ export const ChatSection = ({contact}: Props) => {
             {messages.map((message) => {
                 return <Message msg={message.text} toWho={contact} key={message.id} />;
             })}
+            <button className="send-btn">Send</button>
             <TextInput />
         </div>
     );
